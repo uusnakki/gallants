@@ -1,5 +1,15 @@
 {
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "onchange": "^7.1.0"
+  },
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/style.css -o ./src/css/main.css",
+    "watch:css": "onchange './src/style.css' -- npm run build:css"
   }
+  
 }
